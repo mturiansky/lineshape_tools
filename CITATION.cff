@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: lineshape_tools
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file and the accompanying paper at
+  <doi>. See
+  https://lineshape_tools.readthedocs.io/en/latest/citation.html
+type: software
+authors:
+  - given-names: Mark E.
+    family-names: Turiansky
+    email: mark.e.turiansky.ctr@us.navy.mil
+    affiliation: US Naval Research Laboratory
+    orcid: 'https://orcid.org/0000-0002-9154-3582'
+repository-code: 'https://github.com/mturiansky/lineshape_tools'
+url: 'https://lineshape_tools.readthedocs.io/en/latest/'
+license: MIT
