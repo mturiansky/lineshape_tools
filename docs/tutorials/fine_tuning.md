@@ -25,7 +25,7 @@ Different structure file formats can be obtained with the `ase convert` command.
 ```
 The default is to generate random displacements, and we recommend 10 configurations as a reasonable starting point.
 There is a small advantage to using the `--strategy phon_opt` tag, but the difference is relatively minor compared to the default random configurations.
-See [our paper]() for more details.
+See [our paper](https://doi.org/10.48550/arXiv.2508.09113) for more details.
 
 ## Step 2: Collect Data
 To fine-tune the `mace` foundation model, we need to generate a database of configurations that have energies and forces evaluated.

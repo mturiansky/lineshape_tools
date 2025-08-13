@@ -6,8 +6,9 @@ title: lineshape_tools
 message: >-
   If you use this software, please cite it using the
   metadata from this file and the accompanying paper at
-  <doi>. See
-  https://lineshape_tools.readthedocs.io/en/latest/citation.html
+  https://doi.org/10.48550/arXiv.2508.09113. See
+  https://lineshape-tools.readthedocs.io/en/latest/cite.html
+  for more information.
 type: software
 authors:
   - given-names: Mark E.
@@ -16,5 +17,5 @@ authors:
     affiliation: US Naval Research Laboratory
     orcid: 'https://orcid.org/0000-0002-9154-3582'
 repository-code: 'https://github.com/mturiansky/lineshape_tools'
-url: 'https://lineshape_tools.readthedocs.io/en/latest/'
+url: 'https://lineshape-tools.readthedocs.io/en/latest/'
 license: MIT

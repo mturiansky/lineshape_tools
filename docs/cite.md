@@ -23,7 +23,7 @@ Consider citing the seminal work on first-principles optical lineshapes:
   pages = {073026},
   issn = {1367-2630},
   doi = {10.1088/1367-2630/16/7/073026},
-  langid = {english}
+  langid = {english},
 }
 ```
 Consider citing work that extends the above to include temperature dependence:

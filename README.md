@@ -12,33 +12,32 @@ To install the latest version of `lineshape_tools`, create a new virtual environ
 pip install lineshape_tools
 ```
 <!-- install end -->
-For more installation information and some performance considerations, see the [Installation page]().
+For more installation information and some performance considerations, see the [Installation page](https://lineshape-tools.readthedocs.io/en/latest/install.html).
 
 ### Usage 
 `lineshape_tools` provides a command-line interface for interacting with the code. See
 ```
 lineshape_tools --help
 ```
-Detailed usage information can be found in the [Tutorials page]().
+Detailed usage information can be found in the [Tutorials page](https://lineshape-tools.readthedocs.io/en/latest/tutorials.html).
 
 ### How to Cite
 <!-- cite start -->
 If you use this code, please consider citing
 ```bibtex
 @misc{turiansky_machine_2025,
-  title = {Machine Learning for Fast and Accurate Optical Lineshapes of Defects},
-  author = {Turiansky, Mark E. and Lyons, John L., and Bernstein, Noam},
+  title = {Machine Learning Phonon Spectra for Fast and Accurate Optical Lineshapes of Defects}, 
+  author = {Mark E. Turiansky and John L. Lyons and Noam Bernstein},
   year = {2025},
-  number = {arXiv:XXXX.XXXXX},
-  eprint = {XXXX.XXXXX},
-  primaryclass = {cond-mat},
-  publisher = {arXiv},
-  doi = {},
-  urldate = {},
+  number = {arXiv:2508.09113},
+  eprint = {2508.09113},
   archiveprefix = {arXiv},
+  primaryclass = {cond-mat.mtrl-sci},
+  doi = {10.48550/arXiv.2508.09113},
+  url = {https://arxiv.org/abs/2508.09113}, 
 }
 ```
 <!-- cite end -->
-Please also consider citing the foundational works that made this code possible on the [Citation page]().
+Please also consider citing the foundational works that made this code possible on the [Citation page](https://lineshape-tools.readthedocs.io/en/latest/cite.html).
 
 <!-- index end -->

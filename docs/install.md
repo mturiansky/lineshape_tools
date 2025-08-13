@@ -23,7 +23,7 @@ While compatible with CPUs, training and evaluation of the `mace` models is sign
 We highly recommend using a GPU for those use cases.
 
 ### Numba
-[`numba`]() is used under the hood to speed up several calculations related to lineshape evaluation.
+[`numba`](https://numba.readthedocs.io/en/stable/) is used under the hood to speed up several calculations related to lineshape evaluation.
 There are a few things that can be done to speed up `numba` calculations in some instances.
 
 ##### SVML
