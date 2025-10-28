@@ -50,3 +50,9 @@ Alternatively, we can append the `--plot subplots` tag to produce plots of these
 We note that broadening parameters are highly system specific, and the default values will likely need to be tuned.
 This can be accomplished using the various tags listed in the `lineshape_tools compute-lineshape --help` text.
 If the absorption lineshape is desired instead, append the `--absorption` tag.
+
+```{tip}
+If your structure files contain total energies (e.g., `vasprun.xml` files), then the energy difference can be determined automatically.
+However, this will not include corrections for charge or other effects.
+Alternatively, the energy difference can be provided with the `--de` tag.
+```
