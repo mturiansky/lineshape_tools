@@ -15,7 +15,7 @@ from cyclopts import Parameter
 from tqdm import tqdm
 
 from lineshape_tools.constants import omega2eV
-from lineshape_tools.lineshape import convert_A_to_L, gaussian, get_phonon_spec_func
+from lineshape_tools.lineshape import convert_A_to_L, gaussian, get_phonon_spec_func, get_Stot
 from lineshape_tools.phonon import get_disp_vect, get_ipr, get_phonons
 from lineshape_tools.plot import plot_spec_funcs
 
@@ -878,7 +878,11 @@ def compute_lineshape(
     fin_atoms: Atoms = ase.io.read(final)  # type:ignore[assignment]
 
     if dE is None:
-        dE = np.abs(fin_atoms.get_potential_energy() - ini_atoms.get_potential_energy())
+        try:
+            dE = np.abs(fin_atoms.get_potential_energy() - ini_atoms.get_potential_energy())
+        except RuntimeError:
+            logger.critical("input files do not contain total energy, so dE cannot be determined")
+            raise
         logger.info(f"energy difference not provided, found dE = {dE} from input structures")
 
     sqrt_mass = np.repeat(np.sqrt(fin_atoms.get_masses()), 3)
@@ -901,6 +905,8 @@ def compute_lineshape(
     logger.info("diagonalizing")
     omega, U = get_phonons(H)
     dq_k = U.T @ dq
+
+    logger.info(f"total Huang-Rhys factor Stot={get_Stot(dq_k, omega):.04f}")
 
     if gamma_psb is not None:
         logger.info("computing inverse participation ratios")

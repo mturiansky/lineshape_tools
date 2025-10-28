@@ -5,6 +5,12 @@
 In particular, it implements the approach pioneered by [Alkauskas *et al.*](https://doi.org/10.1088/1367-2630/16/7/073026) to compute the lineshape function within Huang-Rhys theory.
 The code interfaces with [`mace`](https://mace-docs.readthedocs.io/en/latest/) and [`phonopy`](https://phonopy.github.io/phonopy/) to evaluate the dynamical matrix and obtain the phonons of a defect-containing supercell.
 
+_Key Features_:
+ - Compute the temperature-dependent luminescence and absorption spectrum
+ - Compatible with phonons computed directly with Phonopy
+ - Accelerate evaluation of phonons with `mace` foundation models
+ - Convenience tools to fine-tune a `mace` foundation model to your specific system
+
 ### Installation
 <!-- install start -->
 To install the latest version of `lineshape_tools`, create a new virtual environment and run
