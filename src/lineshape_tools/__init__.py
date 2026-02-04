@@ -2,6 +2,6 @@
 
 __author__ = "Mark E. Turiansky"
 __email__ = "mark.e.turiansky.ctr@us.navy.mil"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __copyright__ = "Copyright (c) 2025 Mark E. Turiansky"
 __license__ = "MIT"
