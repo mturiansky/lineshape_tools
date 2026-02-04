@@ -37,6 +37,7 @@ def collect(
     rtol: float = 1e-5,
     config_weight: float = 1.0,
     force_weighting: bool = False,
+    allow_constraint: bool = False,
 ) -> None:
     """Collect and process data for fine-tuning.
 
@@ -66,6 +67,8 @@ def collect(
         force_weighting (bool): store a config_weight that's inversely proportional to the max
             force that any atom feels in the configuration [min(0.02 / max_fpa, 1)]. Overwrites
             the value specified by config_weight.
+        allow_constraint (bool): allow constraints on atoms (e.g. selective dynamics) to modify the
+            forces. This is typically not desirable.
     """
     if strategy.lower() not in ("none", "qr", "dx"):
         raise ValueError("invalid strategy choice")
@@ -79,6 +82,10 @@ def collect(
         read_atoms = ase.io.read(fname, read_index)
         total_read += len(read_atoms)
         for atoms in tqdm(read_atoms, desc="[*] processing atoms", disable=len(read_atoms) < 10):
+            if len(atoms.constraints) > 0 and not allow_constraint:
+                logger.debug("atoms are constrained, removing prior to extracting forces")
+                atoms.set_constraint(None)
+
             forces = atoms.get_forces()
             if min_force < np.linalg.norm(forces, axis=1).max() < max_force:
                 atoms.info["REF_energy"] = atoms.get_potential_energy()
